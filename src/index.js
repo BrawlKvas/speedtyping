@@ -7,12 +7,15 @@ import 'fontsource-roboto'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import { SnackbarProvider } from 'notistack'
 
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <SnackbarProvider maxSnack={1}>
+          <App />
+        </SnackbarProvider>
       </Provider>
     </React.StrictMode>
   </BrowserRouter>,

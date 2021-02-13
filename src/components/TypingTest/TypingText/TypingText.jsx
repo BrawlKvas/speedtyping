@@ -1,8 +1,11 @@
 import { makeStyles, Paper } from "@material-ui/core"
 import classNames from 'classnames'
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import PropTypes from 'prop-types'
 import connect from './TypingText.connect'
+import { useSnackbar } from 'notistack'
+
+const rusLower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
 const useStyles = makeStyles(() => ({
   paper: {
@@ -48,10 +51,17 @@ const useStyles = makeStyles(() => ({
 const TypingText = ({ text, position, isWrong, enterChar, enterBackspace }) => {
   const classes = useStyles()
 
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar()
+
   const charArray = useMemo(() => { return Array.from(text) }, [text])
 
   const changeHandler = (e) => {
-    enterChar(e.target.value)
+    if (rusLower.includes(e.target.value.toLocaleLowerCase()))
+      enqueueSnackbar('Смените раскладку клавиатуры', {
+        variant: 'warning', preventDuplicate: true,
+      })
+    else
+      enterChar(e.target.value)
   }
 
   const keyDownHandler = (e) => {
