@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import SpeedIcon from '@material-ui/icons/Speed'
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline'
 import connect from './YourResults.connect'
@@ -13,13 +14,12 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-const YourResults = ({ speed, accuracy, isFinished, resetToZero }) => {
+const YourResults = ({ speed, accuracy, isFinished }) => {
   const classes = useStyles()
 
   const history = useHistory()
 
   const clickHandler = () => {
-    resetToZero()
     history.push('/test')
   }
 
@@ -48,6 +48,12 @@ const YourResults = ({ speed, accuracy, isFinished, resetToZero }) => {
       </Button>
     </div>
   )
+}
+
+YourResults.propTypes = {
+  speed: PropTypes.number,
+  accuracy: PropTypes.number,
+  isFinished: PropTypes.bool.isRequired
 }
 
 export default connect(YourResults)

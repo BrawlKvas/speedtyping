@@ -1,5 +1,4 @@
 import { connect } from "react-redux"
-import { resetToZero } from './../../../redux/typingTestSlice'
 
 const mapStateToProps = ({ typingTest }) => {
   const { speed, text, wrongCounter, isFinished } = typingTest
@@ -14,4 +13,4 @@ const mapStateToProps = ({ typingTest }) => {
   }
 }
 
-export default connect(mapStateToProps, { resetToZero })
+export default connect(mapStateToProps, null)

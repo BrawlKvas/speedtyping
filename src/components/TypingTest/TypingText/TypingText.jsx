@@ -96,7 +96,9 @@ const TypingText = ({ text, position, isWrong, enterChar, enterBackspace }) => {
 TypingText.propTypes = {
   text: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
-  isWrong: PropTypes.bool.isRequired
+  isWrong: PropTypes.bool.isRequired,
+  enterChar: PropTypes.func.isRequired,
+  enterBackspace: PropTypes.func.isRequired
 }
 
 export default connect(TypingText)

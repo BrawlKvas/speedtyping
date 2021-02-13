@@ -23,7 +23,9 @@ const Speed = ({ launchPoint, position, speed, setSpeed}) => {
 
 Speed.propTypes = {
   launchPoint: PropTypes.instanceOf(Date),
-  position: PropTypes.number.isRequired
+  position: PropTypes.number.isRequired,
+  speed: PropTypes.number.isRequired,
+  setSpeed: PropTypes.func.isRequired
 }
 
 export default connect(Speed)

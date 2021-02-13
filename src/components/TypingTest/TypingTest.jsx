@@ -1,4 +1,5 @@
-import { Button, makeStyles, Paper, Typography } from "@material-ui/core"
+import { Button, makeStyles } from "@material-ui/core"
+import PropTypes from 'prop-types'
 import TypingText from "./TypingText"
 import Statistics from './Statistics'
 
@@ -22,7 +23,7 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-const TypingTest = () => {
+const TypingTest = ({ startTest }) => {
 
   const classes = useStyles()
 
@@ -34,10 +35,14 @@ const TypingTest = () => {
 
       <TypingText />
 
-      <Button variant="outlined" color="secondary">Заново</Button>
+      <Button variant="outlined" color="secondary" onClick={startTest}>Заново</Button>
 
     </div>
   )
+}
+
+TypingTest.propTypes = {
+  startTest: PropTypes.func.isRequired
 }
 
 export default TypingTest

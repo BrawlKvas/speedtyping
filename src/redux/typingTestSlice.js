@@ -52,6 +52,6 @@ export const { resetToZero, setText, enterChar, enterBackspace, setSpeed } = typ
 export const startTest = () => (dispatch) => {
   dispatch(resetToZero())
 
-  TextApi.getText(1)
+  TextApi.getText(6)
     .then(data => dispatch(setText(data)))
 }
