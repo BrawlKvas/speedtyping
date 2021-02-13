@@ -10,7 +10,7 @@ code {
     monospace;
 }
 
-.test {
-  background-color: darkgreen;
-  color: white;
+a {
+  text-decoration: none;
+  color: inherit
 }
