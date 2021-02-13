@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { TextApi } from "../services/api";
+import { createSlice } from "@reduxjs/toolkit"
+import { TextApi } from "../services/api"
 
 const initialState = {
   text: null,
@@ -17,7 +17,7 @@ const typingTestSlice = createSlice({
   initialState,
 
   reducers: {
-    resetToZero: () => initialState ,
+    resetToZero: () => initialState,
 
     setText: (state, { payload }) => { state.text = payload },
 

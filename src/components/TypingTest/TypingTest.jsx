@@ -5,7 +5,7 @@ import Statistics from './Statistics'
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: 900,
+    width: '850px',
     margin: '0 auto',
     marginTop: '65px',
     display: 'flex',
@@ -13,14 +13,6 @@ const useStyles = makeStyles(() => ({
     rowGap: '15px',
     alignItems: 'flex-end'
   },
-
-  paper: {
-    width: '100%',
-    padding: '20px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '30px'
-  }
 }))
 
 const TypingTest = ({ startTest }) => {

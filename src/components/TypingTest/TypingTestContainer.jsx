@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import PropTypes from 'prop-types'
 import AbsoluteLoader from "../common/AbsoluteLoader"
-import InitialDialogue from "./InitialDialogue/InitialDialogue"
+import InitialDialogue from "./InitialDialogue"
 import TypingTest from "./TypingTest"
 import connect from './TypingTestContainer.connect'
 

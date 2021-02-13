@@ -1,5 +1,5 @@
-import Accuracy from "./Accuracy/Accuracy"
-import Speed from "./Speed/Speed"
+import Accuracy from "./Accuracy"
+import Speed from "./Speed"
 
 const Statistics = () => {
   return (

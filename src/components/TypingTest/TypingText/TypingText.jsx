@@ -7,7 +7,6 @@ import connect from './TypingText.connect'
 const useStyles = makeStyles(() => ({
   paper: {
     position: 'relative',
-    width: '100%',
     padding: '35px',
     fontSize: '21px',
     color: '#5c5c5c',
@@ -61,7 +60,7 @@ const TypingText = ({ text, position, isWrong, enterChar, enterBackspace }) => {
   }
 
   const blurHandler = (e) => {
-    const elem = e.currentTarget;
+    const elem = e.currentTarget
     //MOZ
     setTimeout(() => { elem.focus() }, 0)
   }

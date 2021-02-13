@@ -6,7 +6,7 @@ function App() {
     <DefaultLayout>
       <Routers />
     </DefaultLayout>
-  );
+  )
 }
 
-export default App;
+export default App

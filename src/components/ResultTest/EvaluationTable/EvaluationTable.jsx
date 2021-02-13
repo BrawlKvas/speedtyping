@@ -19,7 +19,7 @@ const rows = [
   { result: 'PLATINUM', speed: '350 зн/мин', accuracy: '99.5%' },
   { result: 'GOLD', speed: '250 зн/мин', accuracy: '98.7%' },
   { result: 'SILVER', speed: '200 зн/мин', accuracy: '96%' },
-];
+]
 
 const EvaluationTable = () => {
   const classes = useStyles()
