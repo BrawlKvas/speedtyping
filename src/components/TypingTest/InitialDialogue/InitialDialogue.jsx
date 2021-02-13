@@ -5,7 +5,7 @@ const InitialDialogue = () => {
   const [open, setOpen] = useState(true)
 
   const handleClose = () => setOpen(false)
-
+  
   return (
     <div>
       <Dialog
