@@ -1,10 +1,10 @@
 import { connect } from "react-redux"
 
 const mapStateToProps = ({ typingTest }) => {
-  const { position, wrongCounter } = typingTest
+  const { text, wrongCounter } = typingTest
 
   return {
-    accuracy: +(((position) - wrongCounter) * 100 / (position)).toFixed(1) || 0
+    accuracy: +(((text.length) - wrongCounter) * 100 / (text.length)).toFixed(1)
   }
 }
 
