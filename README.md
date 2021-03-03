@@ -1,7 +1,5 @@
 # Speedtyping
 
-[Демо](https://nobrouk.github.io/)
-
 ---
 
 ## Инструкция по развертыванию
